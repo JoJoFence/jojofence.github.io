@@ -1947,7 +1947,53 @@ body iframe#entriApp { pointer-events: auto; }
 .block-grid.jsx-1318468854 { height: 2522px; }
 @media (min-width: 910px) {
   .block-grid.jsx-1318468854 { height: 1346px; }
-}</style></head><body class="light-theme"><div id="disable-transitions" class="relative h-full w-full"><div class="relative flex h-full w-screen overflow-hidden"><div class="relative h-full min-w-[1px] grow"><div class="relative flex flex-col items-center overflow-y-auto overflow-x-hidden transition-all h-full min-h-full" id="muse-page"><div id="sticky-toolbar" class="fixed inset-x-3 z-20 h-[60px] transition-transform duration-[200ms] sm:inset-x-6 lg:right-[calc(1.5rem+var(--sticky-toolbar-scrollbar-width,0px))] lg:mx-auto lg:left-6 sm:max-w-[min(1200px,calc(100%-3rem-var(--sticky-toolbar-scrollbar-width,0px)))] smMax:top-3 mobileLandscape:top-3 top-6"><div class="flex min-h-full grow justify-between rounded-[20px] p-3 transition-all duration-[200ms] lg:left-6 bg-transparent shadow-transparent"><div class="pointer-events-auto flex " id="muse-page-toolbar-left"><div class="flex items-center gap-2"></div></div><div class="pointer-events-auto flex min-w-[1px] " id="muse-page-toolbar-center"></div><div class="pointer-events-auto flex min-w-[1px] shrink-0"><div class="flex justify-end md:max-w-[39rem] "><div class="flex gap-2 "><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="w-full"><div style="position: relative;"><ul class="shadow-neutral-secondary flex gap-1 border backdrop-blur-[20px] bg-glass-background-primary-default border-glass-border-primary-default flex-row rounded-lg"><li class="flex grow"><a class="flex w-full truncate rounded-lg max-w-[220px]" data-event-name="Navigation Menu &gt; Link" tabindex="-1" data-radix-collection-item="" href="../engphys-cs/"><button name="Navigation Menu" class="group box-border max-w-full select-none transition-colors focus:outline-none focus:ring-0 focus-visible:p-0 disabled:active:ring-0 rounded-lg grow min-w-[1px]" data-event-name="Navigation Menu Button"><div class="flex h-full w-full items-center transition-colors leading-4 
+}</style><style id="lightbox-styles">
+.lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.lightbox-overlay.active { opacity: 1; }
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+</style>
+</head><body class="light-theme"><div id="disable-transitions" class="relative h-full w-full"><div class="relative flex h-full w-screen overflow-hidden"><div class="relative h-full min-w-[1px] grow"><div class="relative flex flex-col items-center overflow-y-auto overflow-x-hidden transition-all h-full min-h-full" id="muse-page"><div id="sticky-toolbar" class="fixed inset-x-3 z-20 h-[60px] transition-transform duration-[200ms] sm:inset-x-6 lg:right-[calc(1.5rem+var(--sticky-toolbar-scrollbar-width,0px))] lg:mx-auto lg:left-6 sm:max-w-[min(1200px,calc(100%-3rem-var(--sticky-toolbar-scrollbar-width,0px)))] smMax:top-3 mobileLandscape:top-3 top-6"><div class="flex min-h-full grow justify-between rounded-[20px] p-3 transition-all duration-[200ms] lg:left-6 bg-transparent shadow-transparent"><div class="pointer-events-auto flex " id="muse-page-toolbar-left"><div class="flex items-center gap-2"></div></div><div class="pointer-events-auto flex min-w-[1px] " id="muse-page-toolbar-center"></div><div class="pointer-events-auto flex min-w-[1px] shrink-0"><div class="flex justify-end md:max-w-[39rem] "><div class="flex gap-2 "><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="w-full"><div style="position: relative;"><ul class="shadow-neutral-secondary flex gap-1 border backdrop-blur-[20px] bg-glass-background-primary-default border-glass-border-primary-default flex-row rounded-lg"><li class="flex grow"><a class="flex w-full truncate rounded-lg max-w-[220px]" data-event-name="Navigation Menu &gt; Link" tabindex="-1" data-radix-collection-item="" href="../index.html"><button name="Navigation Menu" class="group box-border max-w-full select-none transition-colors focus:outline-none focus:ring-0 focus-visible:p-0 disabled:active:ring-0 rounded-lg grow min-w-[1px]" data-event-name="Navigation Menu Button"><div class="flex h-full w-full items-center transition-colors leading-4
+      text-glass-text-primary-default
+      group-hover:bg-glass-background-primary-hover
+      group-hover:text-glass-text-primary-hover
+      group-active:bg-glass-background-primary-active
+      group-active:text-glass-text-primary-active
+      group-disabled:bg-transparent
+      group-disabled:text-glass-text-primary-disabled
+      group-focus-visible:bg-glass-background-primary-hover
+      group-focus-visible:text-glass-text-primary-hover p-2 gap-2 rounded-md body-small-regular justify-start box-border border-2 border-transparent group-focus-visible:group-[&amp;:not([role=menuitem])]:border-action-border-primary-focus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" role="img" class="shrink-0 h-4 w-4"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path></svg><div class="pr-1 truncate">Home</div></div></button></a></li><li class="flex grow"><a class="flex w-full truncate rounded-lg max-w-[220px]" data-event-name="Navigation Menu &gt; Link" tabindex="-1" data-radix-collection-item="" href="../engphys-cs/"><button name="Navigation Menu" class="group box-border max-w-full select-none transition-colors focus:outline-none focus:ring-0 focus-visible:p-0 disabled:active:ring-0 rounded-lg grow min-w-[1px]" data-event-name="Navigation Menu Button"><div class="flex h-full w-full items-center transition-colors leading-4 
       text-glass-text-primary-default
       group-hover:bg-glass-background-primary-hover
       group-hover:text-glass-text-primary-hover 
@@ -2137,4 +2183,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-</script></body></html>
+</script><script id="lightbox-script">
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Target all images with data-nimg inside the block-grid or hero area
+    var allImages = document.querySelectorAll('img[data-nimg]');
+    allImages.forEach(function(img) {
+      // Skip small icons (avatars, link block icons)
+      var w = parseInt(img.getAttribute('width') || '9999');
+      var h = parseInt(img.getAttribute('height') || '9999');
+      if (w <= 48 && h <= 48) return;
+      // Also skip by class check for tiny icons
+      if (img.classList.contains('h-\[18px\]') || img.className.indexOf('w-[18px]') !== -1) return;
+      if (img.className.indexOf('w-6') !== -1 && img.className.indexOf('h-6') !== -1) return;
+
+      // Find the nearest block-container ancestor or a reasonable clickable parent
+      var block = img.closest('[class*="group/block-container"]');
+      if (!block) {
+        // For hero images, use the rounded wrapper
+        block = img.closest('.overflow-hidden');
+      }
+      if (!block) return;
+
+      // Skip if inside an <a> tag already (PDF/link blocks)
+      if (block.closest('a') || block.tagName === 'A') return;
+
+      block.style.cursor = 'zoom-in';
+      block.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+
+        var closeBtn = document.createElement('button');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.innerHTML = '&times;';
+
+        var bigImg = document.createElement('img');
+        bigImg.src = img.src || img.srcset;
+
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(bigImg);
+        document.body.appendChild(overlay);
+
+        requestAnimationFrame(function() { overlay.classList.add('active'); });
+
+        function closeLightbox() {
+          overlay.classList.remove('active');
+          setTimeout(function() { overlay.remove(); }, 200);
+        }
+        overlay.addEventListener('click', closeLightbox);
+        closeBtn.addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
+        document.addEventListener('keydown', function handler(e) {
+          if (e.key === 'Escape') { closeLightbox(); document.removeEventListener('keydown', handler); }
+        });
+      });
+    });
+  });
+})();
+</script>
+</body></html>

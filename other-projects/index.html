@@ -1935,7 +1935,53 @@ body iframe#entriApp { pointer-events: auto; }
 .block-grid.jsx-1603140854 { height: 2032px; }
 @media (min-width: 910px) {
   .block-grid.jsx-1603140854 { height: 1731px; }
-}</style></head><body class="light-theme"><div id="disable-transitions" class="relative h-full w-full"><div class="relative flex h-full w-screen overflow-hidden"><div class="relative h-full min-w-[1px] grow"><div class="relative flex flex-col items-center overflow-y-auto overflow-x-hidden transition-all h-full min-h-full" id="muse-page"><div id="sticky-toolbar" class="fixed inset-x-3 z-20 h-[60px] transition-transform duration-[200ms] sm:inset-x-6 lg:right-[calc(1.5rem+var(--sticky-toolbar-scrollbar-width,0px))] lg:mx-auto lg:left-6 sm:max-w-[min(1200px,calc(100%-3rem-var(--sticky-toolbar-scrollbar-width,0px)))] smMax:top-3 mobileLandscape:top-3 top-6"><div class="flex min-h-full grow justify-between rounded-[20px] p-3 transition-all duration-[200ms] lg:left-6 bg-transparent shadow-transparent"><div class="pointer-events-auto flex " id="muse-page-toolbar-left"><div class="flex items-center gap-2"></div></div><div class="pointer-events-auto flex min-w-[1px] " id="muse-page-toolbar-center"></div><div class="pointer-events-auto flex min-w-[1px] shrink-0"><div class="flex justify-end md:max-w-[39rem] "><div class="flex gap-2 "><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="w-full"><div style="position: relative;"><ul class="shadow-neutral-secondary flex gap-1 border backdrop-blur-[20px] bg-glass-background-primary-default border-glass-border-primary-default flex-row rounded-lg"><li class="flex grow"><a class="flex w-full truncate rounded-lg max-w-[220px]" data-event-name="Navigation Menu &gt; Link" tabindex="-1" data-radix-collection-item="" href="../engphys-cs/"><button name="Navigation Menu" class="group box-border max-w-full select-none transition-colors focus:outline-none focus:ring-0 focus-visible:p-0 disabled:active:ring-0 rounded-lg grow min-w-[1px]" data-event-name="Navigation Menu Button"><div class="flex h-full w-full items-center transition-colors leading-4 
+}</style><style id="lightbox-styles">
+.lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.lightbox-overlay.active { opacity: 1; }
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+</style>
+</head><body class="light-theme"><div id="disable-transitions" class="relative h-full w-full"><div class="relative flex h-full w-screen overflow-hidden"><div class="relative h-full min-w-[1px] grow"><div class="relative flex flex-col items-center overflow-y-auto overflow-x-hidden transition-all h-full min-h-full" id="muse-page"><div id="sticky-toolbar" class="fixed inset-x-3 z-20 h-[60px] transition-transform duration-[200ms] sm:inset-x-6 lg:right-[calc(1.5rem+var(--sticky-toolbar-scrollbar-width,0px))] lg:mx-auto lg:left-6 sm:max-w-[min(1200px,calc(100%-3rem-var(--sticky-toolbar-scrollbar-width,0px)))] smMax:top-3 mobileLandscape:top-3 top-6"><div class="flex min-h-full grow justify-between rounded-[20px] p-3 transition-all duration-[200ms] lg:left-6 bg-transparent shadow-transparent"><div class="pointer-events-auto flex " id="muse-page-toolbar-left"><div class="flex items-center gap-2"></div></div><div class="pointer-events-auto flex min-w-[1px] " id="muse-page-toolbar-center"></div><div class="pointer-events-auto flex min-w-[1px] shrink-0"><div class="flex justify-end md:max-w-[39rem] "><div class="flex gap-2 "><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="w-full"><div style="position: relative;"><ul class="shadow-neutral-secondary flex gap-1 border backdrop-blur-[20px] bg-glass-background-primary-default border-glass-border-primary-default flex-row rounded-lg"><li class="flex grow"><a class="flex w-full truncate rounded-lg max-w-[220px]" data-event-name="Navigation Menu &gt; Link" tabindex="-1" data-radix-collection-item="" href="../index.html"><button name="Navigation Menu" class="group box-border max-w-full select-none transition-colors focus:outline-none focus:ring-0 focus-visible:p-0 disabled:active:ring-0 rounded-lg grow min-w-[1px]" data-event-name="Navigation Menu Button"><div class="flex h-full w-full items-center transition-colors leading-4
+      text-glass-text-primary-default
+      group-hover:bg-glass-background-primary-hover
+      group-hover:text-glass-text-primary-hover
+      group-active:bg-glass-background-primary-active
+      group-active:text-glass-text-primary-active
+      group-disabled:bg-transparent
+      group-disabled:text-glass-text-primary-disabled
+      group-focus-visible:bg-glass-background-primary-hover
+      group-focus-visible:text-glass-text-primary-hover p-2 gap-2 rounded-md body-small-regular justify-start box-border border-2 border-transparent group-focus-visible:group-[&amp;:not([role=menuitem])]:border-action-border-primary-focus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" role="img" class="shrink-0 h-4 w-4"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path></svg><div class="pr-1 truncate">Home</div></div></button></a></li><li class="flex grow"><a class="flex w-full truncate rounded-lg max-w-[220px]" data-event-name="Navigation Menu &gt; Link" tabindex="-1" data-radix-collection-item="" href="../engphys-cs/"><button name="Navigation Menu" class="group box-border max-w-full select-none transition-colors focus:outline-none focus:ring-0 focus-visible:p-0 disabled:active:ring-0 rounded-lg grow min-w-[1px]" data-event-name="Navigation Menu Button"><div class="flex h-full w-full items-center transition-colors leading-4 
       text-glass-text-primary-default
       group-hover:bg-glass-background-primary-hover
       group-hover:text-glass-text-primary-hover 
@@ -1999,7 +2045,7 @@ body iframe#entriApp { pointer-events: auto; }
       group-data-[focus-visible]:text-action-text-secondary-hover
       group-data-[aria-selected]:bg-action-background-secondary-active 
       group-data-[aria-selected]:text-action-text-secondary-active
-       p-2 gap-2 rounded-md body-small-regular justify-center box-border border-2 border-transparent group-focus-visible:group-[&amp;:not([role=menuitem])]:border-action-border-primary-focus"><svg class="text-neutral-icon-primary-default h-4 w-4 shrink-0 shrink-0 h-4 w-4" aria-label="lightbulb" fill="currentColor" role="img"><use href="../assets/icon-sprites.f6bbeb872995753d7_44df83ddeaea.svg#lightbulb"></use></svg><div class="pr-1 truncate">Other Projects</div></div></div></div><div class="grid:flex-row relative flex flex-col gap-5 items-start"><div class="gridMax:text-center gridMax:w-full flex min-h-full flex-col justify-center gap-4 items-start"><h1 class="headline-2-regular grid:headline-1-regular text-neutral-text-primary-default break-words leading-[1.1] ">Other Projects</h1><p class="text-neutral-text-secondary-default headline-5-regular grid:headline-5-light break-words leading-[29px] ">Here are some additional projects that I have completed for course assignments or just for fun!</p></div></div></div><div class="flex w-full justify-center px-3 md:px-6"><div class="jsx-1603140854 block-grid grid:w-[876px] relative w-[425px] origin-top-left scale-[var(--scale-factor)] transition-all"><div class="jsx-2527531134 block-f3f7f08d-6e65-490e-a8ca-11a1ee06716b absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="bg-misc-background-muse-background text-neutral-text-primary-default font-poppins flex h-full w-full flex-col justify-end text-[1.75rem] font-semibold leading-[34px]" style="height: 100%;"><h2 class="mx-4 flex items-start gap-2 pt-4"><span class="line-clamp-3 break-normal">Boldening the Bicycle Border: A Videography Project</span></h2><hr class="border-misc-border-header mx-2 mt-1"></div></div></div></div><div class="jsx-44680704 block-2c7357c8-bb2e-40dd-839d-17d106fc39c6 absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset shadow-objects-block transition-all after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="text-neutral-text-primary-default flex h-full w-full flex-col overscroll-contain bg-neutral-background-primary-default overflow-hidden"><div class="Text_text__opUjM pl-6 pr-10 py-5 text-editor flex grow flex-col gap-2 whitespace-break-spaces break-words"><h2 class="headline-5-light flex items-start gap-2"><span class="line-clamp-2">Overview</span></h2><div><p>This was my final project for the <em>GENED 1140: Borders</em> course I took at Harvard during my junior year. We were tasked with identifying a “border” in the world and composing a video to answer the question of whether we believed the border should be strengthened, weakened, or kept the same. I decided to address the bike lane; that is, the border between bikes and vehicles on the road. I conducted extensive research, reviewing past literature, visiting museums, interviewing transportation managers and local residents, and personally biking around different areas in the city of Cambridge to see what worked and what needed improvement. To present my findings, I put together the following video:</p></div></div></div></div></div></div><div class="jsx-540422677 block-b99228ea-f844-4e87-9663-9e35adf65ae3 absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset shadow-objects-block transition-all after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="h-full w-full rounded-[inherit] bg-neutral-background-primary-default"><div class="h-full w-full rounded-[inherit]"><iframe title="YouTube - Boldening the Bicycle Border | A GENED 1140: Borders Final Project" class="h-full w-full rounded-[inherit] " src="https://www.youtube.com/embed/WzVkUkxy5ao?rel=0"></iframe></div></div></div><div class="border-neutral-border-primary-default flex h-12 w-full shrink-0 items-center justify-between gap-2 py-2 pl-3 pr-2 rounded-b-[inherit] border-t bg-neutral-background-primary-default"><div class="relative min-w-[1px] grow overflow-hidden fade_fade__8X59v"><div class="text-neutral-text-primary-default flex w-fit items-center gap-2 whitespace-nowrap"><div class="flex gap-2"><div class="text-misc-icon-icon h-6 w-6 shrink-0"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" class="injected-svg" data-src="../assets/youtube_7a125ec7658b.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+       p-2 gap-2 rounded-md body-small-regular justify-center box-border border-2 border-transparent group-focus-visible:group-[&amp;:not([role=menuitem])]:border-action-border-primary-focus"><svg class="text-neutral-icon-primary-default h-4 w-4 shrink-0 shrink-0 h-4 w-4" aria-label="lightbulb" fill="currentColor" role="img"><use href="../assets/icon-sprites.f6bbeb872995753d7_44df83ddeaea.svg#lightbulb"></use></svg><div class="pr-1 truncate">Other Projects</div></div></div></div><div class="grid:flex-row relative flex flex-col gap-5 items-start"><div class="gridMax:text-center gridMax:w-full flex min-h-full flex-col justify-center gap-4 items-start"><h1 class="headline-2-regular grid:headline-1-regular text-neutral-text-primary-default break-words leading-[1.1] ">Other Projects</h1><p class="text-neutral-text-secondary-default headline-5-regular grid:headline-5-light break-words leading-[29px] ">Here are some additional projects that I have completed for course assignments or just for fun!</p></div></div></div><div class="flex w-full justify-center px-3 md:px-6"><div class="jsx-1603140854 block-grid grid:w-[876px] relative w-[425px] origin-top-left scale-[var(--scale-factor)] transition-all"><div class="jsx-2527531134 block-f3f7f08d-6e65-490e-a8ca-11a1ee06716b absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="bg-misc-background-muse-background text-neutral-text-primary-default font-poppins flex h-full w-full flex-col justify-end text-[1.75rem] font-semibold leading-[34px]" style="height: 100%;"><h2 class="mx-4 flex items-start gap-2 pt-4"><span class="line-clamp-3 break-normal">Boldening the Bicycle Border: A Videography Project</span></h2><hr class="border-misc-border-header mx-2 mt-1"></div></div></div></div><div class="jsx-44680704 block-2c7357c8-bb2e-40dd-839d-17d106fc39c6 absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset shadow-objects-block transition-all after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="text-neutral-text-primary-default flex h-full w-full flex-col overscroll-contain bg-neutral-background-primary-default overflow-hidden"><div class="Text_text__opUjM pl-6 pr-10 py-5 text-editor flex grow flex-col gap-2 whitespace-break-spaces break-words"><h2 class="headline-5-light flex items-start gap-2"><span class="line-clamp-2">Overview</span></h2><div><p>This was my final project for the <em>GENED 1140: Borders</em> course I took at Harvard during my junior year. We were tasked with identifying a “border” in the world and composing a video to answer the question of whether we believed the border should be strengthened, weakened, or kept the same. I decided to address the bike lane; that is, the border between bikes and vehicles on the road. I conducted extensive research, reviewing past literature, visiting museums, interviewing transportation managers and local residents, and personally biking around different areas in the city of Cambridge to see what worked and what needed improvement. To present my findings, I put together the following video:</p></div></div></div></div></div></div><div class="jsx-540422677 block-b99228ea-f844-4e87-9663-9e35adf65ae3 absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset shadow-objects-block transition-all after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="h-full w-full rounded-[inherit] bg-neutral-background-primary-default"><div class="h-full w-full rounded-[inherit]"><iframe title="YouTube - Boldening the Bicycle Border | A GENED 1140: Borders Final Project" class="h-full w-full rounded-[inherit] " src="https://www.youtube.com/embed/cMVlNcyTtOk?rel=0"></iframe></div></div></div><div class="border-neutral-border-primary-default flex h-12 w-full shrink-0 items-center justify-between gap-2 py-2 pl-3 pr-2 rounded-b-[inherit] border-t bg-neutral-background-primary-default"><div class="relative min-w-[1px] grow overflow-hidden fade_fade__8X59v"><div class="text-neutral-text-primary-default flex w-fit items-center gap-2 whitespace-nowrap"><div class="flex gap-2"><div class="text-misc-icon-icon h-6 w-6 shrink-0"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" class="injected-svg" data-src="../assets/youtube_7a125ec7658b.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
   <path d="M23.9761 6.72362C23.8381 6.21459 23.5692 5.75055 23.1963 5.37761C22.8233 5.00467 22.3593 4.73581 21.8503 4.59774C19.9865 4.08887 12.485 4.08887 12.485 4.08887C12.485 4.08887 4.98312 4.10387 3.119 4.61274C2.60997 4.75081 2.14594 5.01967 1.77299 5.39261C1.40005 5.76555 1.13119 6.22959 0.993125 6.73862C0.5 8.60274 0.5 12.5001 0.5 12.5001C0.5 12.5001 0.5 16.3975 1.0085 18.2766C1.14657 18.7856 1.41543 19.2497 1.78837 19.6226C2.16131 19.9956 2.62535 20.2644 3.13438 20.4025C4.99813 20.9114 12.5 20.9114 12.5 20.9114C12.5 20.9114 20.0019 20.9114 21.866 20.4029C22.375 20.2648 22.8391 19.9959 23.212 19.623C23.5849 19.2501 23.8538 18.786 23.9919 18.277C24.5 16.4129 24.5 12.5001 24.5 12.5001C24.5 12.5001 24.485 8.60274 23.9761 6.72362Z" fill="#FF0000"></path>
   <path d="M10.097 16.1046L16.3201 12.5001L10.0966 8.89562L10.097 16.1046Z" fill="white"></path>
 </svg></div></div>Boldening the Bicycle Border | A GENED 1140: Borders Final Project</div></div></div></div></div></div><div class="jsx-2189118165 block-27861524-d70d-430e-a17f-7bb7c22b35ba absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="bg-misc-background-muse-background text-neutral-text-primary-default font-poppins flex h-full w-full flex-col justify-end text-[1.75rem] font-semibold leading-[34px]" style="height: 100%;"><h2 class="mx-4 flex items-start gap-2 pt-6"><span class="line-clamp-3 break-normal">Quantum Computing and Shor’s Algorithm: A Videography Project</span></h2><hr class="border-misc-border-header mx-2 mt-1"></div></div></div></div><div class="jsx-3424767009 block-3517d6f9-4c7b-4052-ac9a-6cf6a768b34c absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset shadow-objects-block transition-all after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="text-neutral-text-primary-default flex h-full w-full flex-col overscroll-contain bg-neutral-background-primary-default overflow-hidden"><div class="Text_text__opUjM pl-6 pr-10 py-5 text-editor flex grow flex-col gap-2 whitespace-break-spaces break-words"><h2 class="headline-5-light flex items-start gap-2"><span class="line-clamp-2">Overview</span></h2><div><p>This was my final project for the <em>CS191: Classics of Computer Science</em> course I took during my sophomore year at Harvard. The goal of this project was to find a past research paper in computer science and make an argument for why it was impactful or even groundbreaking. I chose a paper written by Peter Shor titled “Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer.” I then composed the following video illustrating the essence of the paper, why it was so revolutionary at the time, and how it has influenced the rising interest and concern surrounding the development of quantum computers.</p></div></div></div></div></div></div><div class="jsx-889694034 block-00e8e3a6-f98b-41d1-b205-c8c7eb3e87c8 absolute transition-all"><div class="jsx-4167960629 relative flex h-full w-full flex-col overflow-hidden rounded-lg after:absolute after:inset-0 after:rounded-lg after:ring-inset shadow-objects-block transition-all after:pointer-events-none  group/block-container"><div class="min-h-[1px] grow rounded-t-[inherit]"><div class="h-full w-full rounded-[inherit] bg-neutral-background-primary-default"><div class="h-full w-full rounded-[inherit]"><iframe title="YouTube - Quantum Computing and Shor’s Algorithms: A CS191 Final Project" class="h-full w-full rounded-[inherit] " src="https://www.youtube.com/embed/XSLWk8PKnvg?rel=0"></iframe></div></div></div><div class="border-neutral-border-primary-default flex h-12 w-full shrink-0 items-center justify-between gap-2 py-2 pl-3 pr-2 rounded-b-[inherit] border-t bg-neutral-background-primary-default"><div class="relative min-w-[1px] grow overflow-hidden fade_fade__8X59v"><div class="text-neutral-text-primary-default flex w-fit items-center gap-2 whitespace-nowrap"><div class="flex gap-2"><div class="text-misc-icon-icon h-6 w-6 shrink-0"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" class="injected-svg" data-src="../assets/youtube_7a125ec7658b.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
@@ -2131,4 +2177,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-</script></body></html>
+</script><script id="lightbox-script">
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Target all images with data-nimg inside the block-grid or hero area
+    var allImages = document.querySelectorAll('img[data-nimg]');
+    allImages.forEach(function(img) {
+      // Skip small icons (avatars, link block icons)
+      var w = parseInt(img.getAttribute('width') || '9999');
+      var h = parseInt(img.getAttribute('height') || '9999');
+      if (w <= 48 && h <= 48) return;
+      // Also skip by class check for tiny icons
+      if (img.classList.contains('h-\[18px\]') || img.className.indexOf('w-[18px]') !== -1) return;
+      if (img.className.indexOf('w-6') !== -1 && img.className.indexOf('h-6') !== -1) return;
+
+      // Find the nearest block-container ancestor or a reasonable clickable parent
+      var block = img.closest('[class*="group/block-container"]');
+      if (!block) {
+        // For hero images, use the rounded wrapper
+        block = img.closest('.overflow-hidden');
+      }
+      if (!block) return;
+
+      // Skip if inside an <a> tag already (PDF/link blocks)
+      if (block.closest('a') || block.tagName === 'A') return;
+
+      block.style.cursor = 'zoom-in';
+      block.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+
+        var closeBtn = document.createElement('button');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.innerHTML = '&times;';
+
+        var bigImg = document.createElement('img');
+        bigImg.src = img.src || img.srcset;
+
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(bigImg);
+        document.body.appendChild(overlay);
+
+        requestAnimationFrame(function() { overlay.classList.add('active'); });
+
+        function closeLightbox() {
+          overlay.classList.remove('active');
+          setTimeout(function() { overlay.remove(); }, 200);
+        }
+        overlay.addEventListener('click', closeLightbox);
+        closeBtn.addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
+        document.addEventListener('keydown', function handler(e) {
+          if (e.key === 'Escape') { closeLightbox(); document.removeEventListener('keydown', handler); }
+        });
+      });
+    });
+  });
+})();
+</script>
+</body></html>
